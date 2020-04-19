@@ -12,7 +12,7 @@ def process():
 
 	name = request.form['name']
 
-	if  re.match("\d{2}-\d{3}", name) :
+	if  re.match("\d{2}-\d{3}$", name) :
 			return jsonify({'name' : 'Kod pocztowy jest prawidłowy!'})
 	else:
 			return jsonify({'error' : 'Kod pocztowy jest nieprawidłowy!'})
